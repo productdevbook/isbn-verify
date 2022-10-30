@@ -1,13 +1,12 @@
 {
 	"root": true,
 	"env": {
-		"es2021": true,
+		"es2022": true,
 		"jest/globals": true
 	},
 	"extends": ["eslint:recommended"],
 	"plugins": ["jsdoc", "jest"],
 	"parserOptions": {
-		"ecmaVersion": 2021,
 		"sourceType": "module"
 	},
 	"rules": {
