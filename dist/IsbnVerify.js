@@ -86,11 +86,11 @@ export default class {
     verifyCheckDigit() {
         if (this.#isbn13) {
             const isbnNoHyphens = this.#isbnNoHyphens;
-            return isbnNoHyphens.substring(12) === this._getCheckDigit13(isbnNoHyphens);
+            return isbnNoHyphens.substring(12) === this.#getCheckDigit13(isbnNoHyphens);
         }
         else if (this.#isbn10) {
             const isbnNoHyphens = this.#isbnNoHyphens;
-            return isbnNoHyphens.substring(9) === this._getCheckDigit10(isbnNoHyphens);
+            return isbnNoHyphens.substring(9) === this.#getCheckDigit10(isbnNoHyphens);
         }
         return false;
     }
@@ -101,7 +101,7 @@ export default class {
      *
      * @returns {string} チェックデジット
      */
-    _getCheckDigit13(isbnNoHyphens) {
+    #getCheckDigit13(isbnNoHyphens) {
         const checkDigit = String(10 -
             ((Number(isbnNoHyphens.substring(0, 1)) +
                 Number(isbnNoHyphens.substring(1, 2)) * 3 +
@@ -129,7 +129,7 @@ export default class {
      *
      * @returns {string} チェックデジット
      */
-    _getCheckDigit10(isbnNoHyphens) {
+    #getCheckDigit10(isbnNoHyphens) {
         const checkDigit = String(11 -
             ((Number(isbnNoHyphens.substring(0, 1)) * 10 +
                 Number(isbnNoHyphens.substring(1, 2)) * 9 +
