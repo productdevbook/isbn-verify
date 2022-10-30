@@ -6,7 +6,7 @@ interface isOption {
  * ISBN Verify
  */
 export default class {
-	#isbnNoHyphens: string; // ハイフンなしの ISBN
+	readonly #isbnNoHyphens: string; // ハイフンなしの ISBN
 	#isbn13 = false; // 現行規格（13桁）の ISBN か
 	#isbn10 = false; // 旧規格（10桁）の ISBN か
 
