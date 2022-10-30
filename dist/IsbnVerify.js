@@ -150,4 +150,4 @@ export default class {
         return checkDigit;
     }
 }
-//# sourceMappingURL=ISBN.js.map
+//# sourceMappingURL=IsbnVerify.js.map

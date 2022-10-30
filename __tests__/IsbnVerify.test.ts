@@ -1,4 +1,4 @@
-import IsbnVerify from '../src/ISBN';
+import IsbnVerify from '../src/IsbnVerify';
 
 describe('ISBN-13（ハイフンあり）', () => {
 	const isbnVerify = new IsbnVerify('978-4-06-519981-7');
